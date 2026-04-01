@@ -223,7 +223,8 @@ def analyze_waveforms(
         "mean_baseline_V_err": err_baseline,
         "mean_rms_V": mean_rms,
         "mean_rms_V_err": err_rms,
-        "SPE gain": mean_charge * 1e-12 / 1.6e-19
+        "SPE gain": mean_charge * 1e-12 / 1.6e-19,
+        "SPE gain err": err_charge * 1e-12 / 1.6e-19
     }
 
     return summary, df, selected_debug
@@ -473,7 +474,7 @@ def main():
     print(f"Mean duration [ns]     : {summary['mean_duration_ns']:.6f} ± {summary['mean_duration_ns_err']:.6f}")
     print(f"Mean baseline [V]      : {summary['mean_baseline_V']:.6e} ± {summary['mean_baseline_V_err']:.6e}")
     print(f"Mean RMS [V]           : {summary['mean_rms_V']:.6e} ± {summary['mean_rms_V_err']:.6e}")
-    print(f"SPE gain               : {summary['SPE gain']:.6e}")
+    print(f"SPE gain               : {summary['SPE gain']:.6e} ± {summary['SPE gain err']:.6e}")
 
     print(f"\nSaved summary CSV to: {out_csv}")
     if debug_dir is not None:
