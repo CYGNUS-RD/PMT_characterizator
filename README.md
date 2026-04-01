@@ -1,6 +1,6 @@
 # PMT analysis tools
 
-Small repo for PMT waveform analysis in CYGNO.
+Small repo for PMT waveform analysis in CYGNO. The data taken which analyses are ones for calibration of the gain curve of PMT: SPE and high intensity light data.
 
 ## Files
 
