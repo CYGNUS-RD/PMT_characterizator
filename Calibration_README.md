@@ -47,7 +47,7 @@ This guide outlines the standard procedure for calibrating PMTs.
 * Open the **Event Viewer** from the terminal:
   * Navigate to the source folder by typing: `cd daq/online/source`
   * Launch the viewer: `python3 eventviewer.py -c 4` *(Note: check if the connected channel is N.4).*
-* Check that the current channel is registering visible spikes in the `650` to `750` samples range.
+* Check that the current channel is registering visible signal in the `650` to `750` samples range.
 
 ---
 
