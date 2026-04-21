@@ -24,7 +24,7 @@ This guide outlines the standard procedure for calibrating PMTs.
 * With the PMT on the support, screw both top pieces of the support together to securely fix the PMT's position directly in front of the LED source.
 
 **5. Connect the Cabling**
-* Connect the HV cable to the HV port. *(Note: The HV port is connected via the red cable to the HV module).*
+* Connect the HV cable to the HV port.
 * Connect the BNC cable to the readout port.
 
 **6. Seal the Dark Box**
@@ -39,7 +39,7 @@ This guide outlines the standard procedure for calibrating PMTs.
 **7. Power Up and Check Pulses**
 * Turn on the HV and **slowly** raise the voltage to `900V`.
 * Log into the DAQ computer.
-* In the browser page of the MIDAS DAQ, navigate to the **Programs** tab and check that `CUPID NMV` is green. If it is not, press **Start**.
+* In the browser page of the DAQ, navigate to the **Programs** tab and check that `CUPID NMV` is green. If it is not, press **Start**.
 * In the **ODB** tab, verify that the sampling frequency is set to `2500` (2.5 Ms/s).
 * Start a test data-taking run with the following settings:
   * **Write:** Unticked (Disabled)
@@ -60,6 +60,7 @@ This guide outlines the standard procedure for calibrating PMTs.
 * Acquire `4000` events.
 * Run the analysis script: `runAnal.py`.
 * Verify that the Trigger Rate is between **10% (0.10)** and **5% (0.05)**.
+* Remember to write in the `PMT_characterisation\Datatake` file ( available  at the link `https://docs.google.com/spreadsheets/d/1_ymctPCSqQi_dhAj0rm1txnjqNDXYLwxiHr_jPbpXd8/edit?usp=sharing`) the PMT ID, the monitored current and voltage and run number, in the same style as previously taken runs.
 * **Voltage Sweep:** Once you have verified all of the points above, repeat this measurement, decreasing the voltage in steps of `50V`, all the way down to `800V` (i.e., 1050V, 1000V, 950V, etc.).
 
 ---
@@ -72,4 +73,5 @@ This guide outlines the standard procedure for calibrating PMTs.
 * Check the Event Viewer: On average, the pulses should show a drop of about `2500` ADC counts from the baseline (down to roughly `1000` ADC counts).
   * *Tip: It is helpful to set a fixed top (`-t`) and bottom (`-b`) range in the Event Viewer to monitor this.*
 * Adjust the LED power slightly up or down to match this average drop.
+* Like in the SPE acquisition mode, all runs must be recored in the `PMT_characterisation\Datatake` file.
 * **Voltage Sweep:** Repeat the measurements, decreasing the voltage in steps of `50V`, all the way down to `800V`.
