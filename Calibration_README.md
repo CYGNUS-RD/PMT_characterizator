@@ -60,7 +60,7 @@ This guide outlines the standard procedure for calibrating PMTs.
 * Acquire `4000` events. (Use start run from DAQ page with Write data ticked)
 * Run the analysis script: `runAnal.py` (it works on notebooks).
 * Verify that the Trigger Rate is between **10% (0.10)** and **5% (0.05)**.
-* Remember to write in the `PMT_characterisation\Datatake` file ( available  at the link `https://docs.google.com/spreadsheets/d/1_ymctPCSqQi_dhAj0rm1txnjqNDXYLwxiHr_jPbpXd8/edit?usp=sharing`) the PMT ID, the monitored current and voltage and run number, in the same style as previously taken runs.
+* Remember to write in the `PMT_characterisation\Datatake` file ( available at [Logbook_PMT](https://docs.google.com/spreadsheets/d/1_ymctPCSqQi_dhAj0rm1txnjqNDXYLwxiHr_jPbpXd8/edit?usp=sharing) ) the PMT ID, the monitored current and voltage and run number, in the same style as previously taken runs.
 * **Voltage Sweep:** Once you have verified all of the points above, repeat this measurement, decreasing the voltage in steps of `50V`, all the way down to `800V` (i.e., 1050V, 1000V, 950V, etc.).
 
 ---
